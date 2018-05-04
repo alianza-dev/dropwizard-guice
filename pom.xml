@@ -29,11 +29,29 @@
         </developer>
     </developers>
 
+    <build>
+      <pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.4.0.905</version>
+          </plugin>
+        </plugins>
+      </pluginManagement>
+    </build>
+
     <properties>
         <dropwizard.version>1.0.0</dropwizard.version>
         <dep.guava.version>19.0</dep.guava.version>
         <dep.jetty.version>9.3.11.v20160721</dep.jetty.version>
         <hibernate.version>5.1.3.Final</hibernate.version>
+        <sonar.branch>test</sonar.branch>
+        <sonar.project>guice</sonar.project>
+        <sonar.projectVersion>${project.Version}</sonar.projectVersion>
+        <sonar.login>0fd9abc98597b4380a9502f4ace7bccd8b64b1f2</sonar.login>
+        <sonar.host.url>https://sonar.dev.cpe.alz.ninja</sonar.host.url>
+        <sonar.analysis.mode>preview</sonar.analysis.mode>
     </properties>
 
     <dependencyManagement>
